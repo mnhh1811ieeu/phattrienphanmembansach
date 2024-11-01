@@ -1,12 +1,37 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 namespace Phát_triển_phần_mềm_bán_sách
 {
     public partial class Form1 : Form
     {
+        private DataProvider dataProvider = new DataProvider();
         public Form1()
         {
             InitializeComponent();
+            init();
         }
-
+        private void init()
+        {
+            initSach();
+        }
+        private void initSach()
+        {
+            loaddgSach();
+        }
+        private void loaddgSach()
+        {
+            DataTable dt = new DataTable();
+            StringBuilder query= new StringBuilder("SELECT * FROM Sach");
+            dt= dataProvider.execQuery(query.ToString());
+            dgSach.DataSource = dt;
+        }
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -48,6 +73,11 @@ namespace Phát_triển_phần_mềm_bán_sách
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void datePhieunhapNgaylapphieunhap_ValueChanged(object sender, EventArgs e)
         {
 
         }
