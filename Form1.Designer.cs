@@ -148,6 +148,7 @@
             datePhieunhapNgaylapphieunhap.Name = "datePhieunhapNgaylapphieunhap";
             datePhieunhapNgaylapphieunhap.Size = new Size(356, 34);
             datePhieunhapNgaylapphieunhap.TabIndex = 7;
+            datePhieunhapNgaylapphieunhap.ValueChanged += datePhieunhapNgaylapphieunhap_ValueChanged;
             // 
             // txtPhieunhapTennhacungcap
             // 
@@ -204,6 +205,7 @@
             dgPhieunhap.RowHeadersWidth = 62;
             dgPhieunhap.Size = new Size(926, 274);
             dgPhieunhap.TabIndex = 6;
+            dgPhieunhap.CellContentClick += dgPhieunhap_CellContentClick;
             // 
             // tabPage2
             // 
@@ -559,7 +561,7 @@
             dgSach.Location = new Point(24, 36);
             dgSach.Name = "dgSach";
             dgSach.RowHeadersWidth = 62;
-            dgSach.Size = new Size(782, 225);
+            dgSach.Size = new Size(904, 267);
             dgSach.TabIndex = 0;
             // 
             // Form1
